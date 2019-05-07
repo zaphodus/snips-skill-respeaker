@@ -151,7 +151,7 @@ void check_nightmode(void) {
     read_time = localtime(&curr_time);
 
     if (read_time->tm_hour * 100 + read_time->tm_min >=
-        RUN_PARA.sleep_hour * 100 + RUN_PARA.sleep_minute &&
+        RUN_PARA.sleep_hour * 100 + RUN_PARA.sleep_minute ||
         read_time->tm_hour * 100 + read_time->tm_min <=
         RUN_PARA.wake_hour * 100 + RUN_PARA.wake_minute) {
         if (ON_DISABLED != RUN_PARA.curr_state) {
